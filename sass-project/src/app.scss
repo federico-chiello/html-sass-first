@@ -1,7 +1,26 @@
 // Realizzate un semplice layout come tanti altri fatti fino ad ora con un header, 3 colonne e un footer, tutto utilizzando alcune regole base di sass e ovviamente laravel mix.
+$first_color: lightblue;
+$height_header_footer: 90px;
+$text_central: center;
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
 
 .container{
   header, footer{
-    height: 90px;
+    height: $height_header_footer;
+    background-color: $first_color;
+    text-align: $text_central;
+  }
+  #first{
+    height: calc(100vh - #{$height_header_footer * 2});
+    background-color: lightgreen;
+  }
+  #second{
+    height: calc(100vh - #{$height_header_footer * 4});
+    background-color: violet;
   }
 }

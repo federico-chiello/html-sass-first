@@ -1,3 +1,19 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
 .container header, .container footer {
   height: 90px;
+  background-color: lightblue;
+  text-align: center;
+}
+.container #first {
+  height: calc(100vh - 180px);
+  background-color: lightgreen;
+}
+.container #second {
+  height: calc(100vh - 360px);
+  background-color: violet;
 }

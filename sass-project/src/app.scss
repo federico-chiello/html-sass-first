@@ -1,5 +1,7 @@
 // Realizzate un semplice layout come tanti altri fatti fino ad ora con un header, 3 colonne e un footer, tutto utilizzando alcune regole base di sass e ovviamente laravel mix.
 
-body {
-  background-color: green
+.container{
+  header, footer{
+    height: 90px;
+  }
 }

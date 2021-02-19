@@ -2,6 +2,17 @@
 $first_color: lightblue;
 $height_header_footer: 90px;
 $text_central: center;
+@mixin clearfix {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@mixin flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 * {
   margin: 0;
@@ -14,13 +25,44 @@ $text_central: center;
     height: $height_header_footer;
     background-color: $first_color;
     text-align: $text_central;
+    @include flexbox;
   }
   #first{
     height: calc(100vh - #{$height_header_footer * 2});
     background-color: lightgreen;
+    .col-left, .col-center, .col-right{
+      float: left;
+      text-align: $text_central;
+      height: 100%;
+      @include flexbox;
+    }
+    .col-left, .col-right{
+      width: 20%;
+      background-color: pink;
+    }
+    .col-center{
+      width: 60%;
+      background: blue;
+    }
+    &:after{
+      @include clearfix;
+    }
   }
   #second{
     height: calc(100vh - #{$height_header_footer * 4});
-    background-color: violet;
+    .col-left, .col-right{
+      float: left;
+      width: 50%;
+      height: 100%;
+      background-color: green;
+      border: 1px solid black;
+      @include flexbox;
+    }
+    &:after{
+      @include clearfix;
+    }
+    .col-left{
+      background-color: violet;
+    }
   }
 }

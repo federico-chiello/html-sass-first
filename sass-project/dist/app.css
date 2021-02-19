@@ -8,12 +8,53 @@
   height: 90px;
   background-color: lightblue;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container #first {
   height: calc(100vh - 180px);
   background-color: lightgreen;
 }
+.container #first .col-left, .container #first .col-center, .container #first .col-right {
+  float: left;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container #first .col-left, .container #first .col-right {
+  width: 20%;
+  background-color: pink;
+}
+.container #first .col-center {
+  width: 60%;
+  background: blue;
+}
+.container #first:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .container #second {
   height: calc(100vh - 360px);
+}
+.container #second .col-left, .container #second .col-right {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-color: green;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container #second:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.container #second .col-left {
   background-color: violet;
 }

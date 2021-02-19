@@ -50,11 +50,11 @@
   justify-content: center;
   align-items: center;
 }
+.container #second .col-left {
+  background-color: violet;
+}
 .container #second:after {
   content: "";
   display: table;
   clear: both;
-}
-.container #second .col-left {
-  background-color: violet;
 }

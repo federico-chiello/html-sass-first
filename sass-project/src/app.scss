@@ -58,11 +58,11 @@ $text_central: center;
       border: 1px solid black;
       @include flexbox;
     }
-    &:after{
-      @include clearfix;
-    }
     .col-left{
       background-color: violet;
+    }
+    &:after{
+      @include clearfix;
     }
   }
 }
